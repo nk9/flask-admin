@@ -1,3 +1,11 @@
+body {
+    padding-top: 4px;
+}
+
+.hidden {
+    display: none;
+}
+
 /* List View - fix trash icon inside table column */
 .model-list form.icon {
     display: inline;
