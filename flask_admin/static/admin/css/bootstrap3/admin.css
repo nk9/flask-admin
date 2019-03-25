@@ -136,3 +136,18 @@ body.modal-open {
 :-moz-placeholder { /* Firefox 18- */
     text-overflow:ellipsis;
 }
+
+.timerangepicker-to {
+    float: right;
+    margin-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.mapbox-search-input {
+    position: absolute;
+    z-index: 9999;
+    display: block;
+    margin: -42px 0 0 10px;
+    width: 50%;
+}

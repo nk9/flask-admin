@@ -206,7 +206,7 @@
         map.addControl(drawControl);
         if (window.MAPBOX_SEARCH) {
           var circle = L.circleMarker([0, 0]);
-          var $autocompleteEl = $('<input style="position: absolute; z-index: 9999; display: block; margin: -42px 0 0 10px; width: 50%">');
+          var $autocompleteEl = $('<input class="mapbox-search-input">');
           var $form = $($el.get(0).form);
 
           $autocompleteEl.insertAfter($map);
@@ -445,7 +445,7 @@
                 $el.data('daterangepicker').container.find('.daterangepicker_start_input').hide();
                 $el.data('daterangepicker').container.find('.daterangepicker_end_input').hide();
                 // hack - add TO between time inputs
-                $el.data('daterangepicker').container.find('.left').before($('<div style="float: right; margin-top: 20px; padding-left: 5px; padding-right: 5px;"> to </span>'));
+                $el.data('daterangepicker').container.find('.left').before($('<div class="timerangepicker-to"> to </div>'));
                 $el.on('showCalendar.daterangepicker', function (event, data) {
                     var $container = data.container;
                     $container.find('.calendar-date').remove();
