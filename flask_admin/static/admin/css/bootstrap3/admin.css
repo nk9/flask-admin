@@ -164,3 +164,7 @@ body.modal-open {
 .pull-right > .btn-primary {
     display: none;
 }
+
+.pull-right > .inline-label {
+    display: inline;
+}

@@ -199,3 +199,7 @@ table.filters tr td {
 .pull-right > .btn-primary {
     display: none;
 }
+
+.pull-right > .inline-label {
+    display: inline;
+}
