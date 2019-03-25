@@ -181,8 +181,8 @@
     {{ super() }}
 
     {% if filter_groups %}
-      <div id="filter-groups-data" style="display:none;">{{ filter_groups|tojson|safe }}</div>
-      <div id="active-filters-data" style="display:none;">{{ active_filters|tojson|safe }}</div>
+      <div id="filter-groups-data">{{ filter_groups|tojson|safe }}</div>
+      <div id="active-filters-data">{{ active_filters|tojson|safe }}</div>
     {% endif %}
 
     {{ lib.form_js() }}

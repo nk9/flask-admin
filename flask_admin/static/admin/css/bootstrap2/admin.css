@@ -191,3 +191,11 @@ table.filters tr td {
     color: red;
     font-weight: bold;
 }
+
+.filter-groups-data, .active-filters-data {
+    display: none;
+}
+
+.pull-right > .btn-primary {
+    display: none;
+}
