@@ -126,7 +126,7 @@
     <div class="control-label">
       <label for="{{ field.id }}">{{ field.label.text }}
           {% if h.is_required_form_field(field) %}
-            <strong style="color: red">&#42;</strong>
+            <span class="required-marker">&#42;</span>
           {%- else -%}
             &nbsp;
           {%- endif %}

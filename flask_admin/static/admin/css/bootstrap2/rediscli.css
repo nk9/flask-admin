@@ -46,3 +46,7 @@
 .console .error {
 	color: red;
 }
+
+#execute-view-data {
+    display: none;
+}

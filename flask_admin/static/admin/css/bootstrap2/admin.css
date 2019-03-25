@@ -186,3 +186,8 @@ table.filters tr td {
     margin: -42px 0 0 10px;
     width: 50%;
 }
+
+.required-marker {
+    color: red;
+    font-weight: bold;
+}
