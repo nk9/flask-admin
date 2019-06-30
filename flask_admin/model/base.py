@@ -388,6 +388,20 @@ class BaseModelView(BaseView, ActionsMixin):
                 column_sortable_list = (
                     'name', ('user', ('user.first_name', 'user.last_name')))
 
+        You can even sort on hybrid fields that you define yourself::
+
+            from sqlalchemy.ext.hybrid import hybrid_property
+            from datetime import datetime
+
+            class MyModel(db.Model):
+                @hybrid_property
+                def sortable_date(self):
+                    # Given a date_str like "23/03/2019", return a date object
+                    return datetime.strptime(self.date_str, '%d/%m/%Y')
+
+            class MyView(BaseModelView):
+                column_sortable_list = (('date_str', (MyModel.sortable_date,)),)
+
         When using SQLAlchemy models, model attributes can be used instead
         of strings::
 
