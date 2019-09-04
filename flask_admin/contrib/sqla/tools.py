@@ -215,5 +215,10 @@ def is_relationship(attr):
     return hasattr(attr, 'property') and hasattr(attr.property, 'direction')
 
 
-def is_association_proxy(attr):
+def is_association_proxy(in_attr):
+    attr = in_attr
+
+    if hasattr(attr, 'parent'):
+        attr = in_attr.parent
+
     return hasattr(attr, 'extension_type') and attr.extension_type == ASSOCIATION_PROXY
